@@ -1,0 +1,28 @@
+quarkus:
+  datasource:
+    db-kind: postgresql
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/ventas_prueba
+    username: postgres
+    password: postgres
+  flyway:
+    migrate-at-start: true
+
+  hibernate-orm:
+    database:
+      generation: none
+    physical-naming-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    log:
+      sql: true  # Activa el log de las consultas SQL
+      format-sql: true  # Formatea las consultas SQL para mayor claridad
+
+  log:
+    category:
+      "org.hibernate":
+        level: DEBUG  # Muestra detalles de Hibernate
+      "io.quarkus.hibernate.validator.runtime":
+        level: DEBUG  # Muestra detalles de validaciones
+
+  resteasy:
+    scan: true
+    scan-packages: com.valentinlopez.ventas.prueba
