@@ -8,7 +8,7 @@ import lombok.Data;
 @Valid
 public class ClienteRequest {
 
-    // Estoy dejando las anotaciones con la finalidad de aprendizaje.
+    // Estoy dejando las anotaciones con la finalidad de aprendizaje
 
     @NotBlank(message = "El nombre no puede estar vacío")
     @Size(max = 100, message = "El nombre no puede tener más de 100 caracteres")
